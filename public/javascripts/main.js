@@ -126,7 +126,7 @@ function lampLSOA(ecode, bbox) {
     var ecode = { ecode: ecode };
 
     $.post('/lampMapData/', ecode, function(data) {
-        var lampMapData = L.geoJson(data, {
+        L.geoJson(data, {
             onEachFeature: popUp,
             pointToLayer: function(feature, latlng) {
                 return L.marker(latlng, {
