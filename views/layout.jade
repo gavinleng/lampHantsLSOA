@@ -1,0 +1,15 @@
+doctype html
+html
+  meta(charset='UTF-8')
+  head
+    title= title
+    link(rel='stylesheet', href='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css')
+    script(src='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script(src='/lib/leaflet-search.js')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/leaflet-search.css')
+    script.
+        var hoodsData = !{JSON.stringify(hoodsData)};
+  body
+    block content
